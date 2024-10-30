@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="random.css" />
+    <title>Random mini projects</title>
+  </head>
+  <body>
+    <!-- Temperature conversation -->
+    <form>
+      <div>
+        <h1>Temperature conversation:</h1>
+        <input type="text" value="0" id="temperatureInput" class="inputField" />
+      </div>
+      <div>
+        <input type="radio" name="tempRadio" id="toFahrenheit" />
+        <label for="toFahrenheit">Celsius ➡ Fahrenheit</label>
+      </div>
+      <div>
+        <input type="radio" name="tempRadio" id="toCelsius" />
+        <label for="toCelsius">Fahrenheit ➡ Celsius</label>
+      </div>
+      <div>
+        <button type="button" onclick="convert()">Submit</button>
+      </div>
+      <p id="resultTemp"></p>
+    </form>
+
+    <!-- // House edge calculator -->
+    <form>
+      <h1>House edge calculation:</h1>
+      <input
+        type="text"
+        class="inputField"
+        value="1"
+        id="oddsInput1"
+        oninput="calculate()"
+      />
+      <input
+        type="text"
+        class="inputField"
+        value="1"
+        id="oddsInput2"
+        oninput="calculate()"
+      />
+      <input
+        type="text"
+        class="inputField"
+        value="1"
+        id="oddsInput3"
+        oninput="calculate()"
+      />
+      <div>
+        <button type="button" oninput="calculate()">Calculate</button>
+      </div>
+      <p id="resultHouse"></p>
+    </form>
+
+    <!-- Dice roller -->
+    <form>
+      <div>
+        <h1>Dice roller</h1>
+        <label for="numOfDice" class="diceLabel"># of dice:</label>
+        <input
+          type="number"
+          min="0"
+          max="20"
+          value="1"
+          class="inputField"
+          id="numOfDice"
+        />
+        <button type="button" onclick="rollDice()">Roll</button>
+        <div id="diceResult"></div>
+        <div id="diceImg"></div>
+      </div>
+    </form>
+
+    <!-- Color changer -->
+    <form>
+      <h1>Color Changer</h1>
+      <button
+        type="button"
+        onclick="darkMode('rgb(91, 91, 91)')"
+        class="darkModeBtn"
+        id="darkModeBtn"
+      >
+        Dark Mode
+      </button>
+      <button
+        type="button"
+        onclick="lightMode('rgb(216, 236, 253)')"
+        class="lightModeBtn"
+        id="lightModeBtn"
+      >
+        Light Mode
+      </button>
+    </form>
+
+    <!-- // Free bet hedge -->
+    <form>
+      <h1>Free Bet Hedge:</h1>
+      <div>
+        <label for="freeBet">Free bet amount:</label>
+        <input
+          id="freeBet"
+          class="inputField inputFieldHedge"
+          type="number"
+          step="1000"
+        />
+      </div>
+      <div>
+        <label for="highOdds">High odds:</label>
+        <input
+          id="highOdds"
+          class="inputField inputFieldHedge"
+          type="number"
+          step="0.1"
+        />
+      </div>
+      <div>
+        <label for="shortOdds">Short odds:</label>
+        <input
+          id="shortOdds"
+          class="inputField inputFieldHedge"
+          type="number"
+          step="0.1"
+        />
+      </div>
+      <div>
+        <button type="button" onclick="freeBetHedgeCalculator()">
+          Calculate
+        </button>
+      </div>
+      <div>
+        Place <span id="yourBet" class="yourBet">#</span> on the short odds!
+      </div>
+      <div>Net profit <span id="netProfit" class="netProfit">#</span></div>
+      <div>House edge <span id="houseEdge" class="houseEdge">#</span></div>
+    </form>
+    <!-- upload pic -->
+    <form>
+      <h1>Upload picture</h1>
+      <label for="uploadImgInput" class="uploadImgLabel">Upload picture</label>
+      <input
+        type="file"
+        accept="image/jpeg, image/png, image/jpg"
+        id="uploadImgInput"
+        class="uploadImgInput"
+      />
+      <img src="images/emptyImage.svg" id="uploadedImg" height="100px" />
+    </form>
+    <!-- PokéApi -->
+    <form id="pokemonForm">
+      <h1>PokéApi</h1>
+      <input
+        type="text"
+        class="inputField"
+        placeholder="Pikachu"
+        id="pokemonName"
+      />
+      <br />
+      <button type="submit" onclick="fetchData()">Fetch Pokemon</button>
+      <img src="" alt="Pokemon image" id="pokemonImg" style="display: none" />
+    </form>
+    <script src="random.js"></script>
+  </body>
+</html>

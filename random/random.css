@@ -1,0 +1,111 @@
+:root {
+  --dark-color: rgb(91, 91, 91);
+  --light-color: rgb(216, 236, 253);
+}
+
+* {
+  padding: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: var(--dark-color);
+  display: flex;
+  font-size: 110%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* box-sizing: border-box; */
+}
+
+form {
+  width: 300px;
+  min-height: 300px;
+  border: solid black;
+  text-align: center;
+  background-color: beige;
+  box-shadow: 5px 5px 15px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.inputField {
+  text-align: center;
+  font-size: 1.1em;
+  width: 8em;
+  border: solid 2px;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.diceLabel {
+  margin-right: 5px;
+}
+
+h1 {
+  color: rgb(72, 72, 216);
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#toCelsius {
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+button {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin: 0.3rem;
+}
+
+button:hover {
+  background-color: rgb(255, 71, 71);
+}
+
+.darkModeBtn {
+  background-color: var(--dark-color);
+}
+
+.lightModeBtn {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.netProfit {
+  color: green;
+}
+
+.yourBet {
+  color: blue;
+}
+
+/* .inputFieldHedge {
+} */
+
+.uploadImgLabel {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.uploadImgInput {
+  display: none;
+}
+
+#pokemonImg {
+  margin: 0 auto !important;
+}
